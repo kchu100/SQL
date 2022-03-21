@@ -1,8 +1,4 @@
-# SQL
---================================  
---Query using a while loop  
---replicate(string, n) --> repeats a string n times  
---================================  
+# SQL  
 Tables are 0-indexed  
 -----------------------------***SQL Commands***---------------------------------  
 ***SELECT*** - extracts data from a database  
@@ -88,9 +84,8 @@ Returning a table:
 &emsp;&emsp;&emsp; SELECT *  
 &emsp;&emsp;&emsp; FROM city  
 &emsp;&emsp;&emsp; WHERE city.long > @long;  
-
-
-
+-----------------------------***MySQL***-------------------------------------------  
+ 
 
 
 
