@@ -23,6 +23,18 @@ displayed underneath its corresponding Occupation.
 The output column headers should be Doctor, Professor, Singer, and Actor, respectively.
 
 Note: Print NULL when there are no more names corresponding to an occupation.
+Why MIN in the select statement?
+
+After putting the select cases, add "ORDER BY Name" (Refer above code on where to add Order by clause). The result will look like this https://imgur.com/aBHUqN6
+What changed? the names in all four columns are sorted as per alphabetical order.
+
+Now, we only want the names and not the NULL values from our virtual table. 
+How can we do that? - There may be multiple ways, lets us consider the MIN/MAX (Yes, you can replace MIN with MAX and you will get the same result)
+
+Without GROUP BY clause - When a MIN/MAX is used in a Select statement, 
+it will return The "LOWEST" element from each column 
+(which happened to be the first element because we used ORDER BY, if you use MAX, you will get the last element from each column). 
+It will look like this https://imgur.com/XDZzc4Z That means, you will always get a single row from a table.
 https://www.hackerrank.com/challenges/occupations/copy-from/268538337
 */
 set @r1 = 0, @r2 = 0, @r3 = 0, @r4 = 0;
