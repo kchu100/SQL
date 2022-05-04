@@ -56,3 +56,23 @@ from
     order by name
 ) as t
 group by rowNumber
+
+
+/*
+Distinguish between the root, leaf and inner nodes in a binary search tree
+Root = has no parent and have child nodes
+Leaf = has no child nodes/has a parent node
+Inner = has both parent and child nodes
+https://www.hackerrank.com/challenges/binary-search-tree-1/problem
+*/
+select 
+    case 
+        when P is null then concat(N, ' Root')
+        when N in (select distinct P from bst) then concat(N, ' Inner')
+        else concat(N, ' Leaf')
+    end
+from bst
+order by N
+
+
+
