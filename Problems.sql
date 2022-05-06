@@ -75,4 +75,21 @@ from bst
 order by N
 
 
+/*
+https://www.hackerrank.com/challenges/challenges/problem?isFullScreen=false
+*/
+select *
+from 
+(
+    select h.hacker_id, h.name, count(c.challenge_id) as ct
+    from hackers as h inner join challenges as c on h.hacker_id = c.hacker_id
+    group by h.hacker_id, h.name
+    order by ct desc, h.hacker_id
+) as t
+
+
+
+
+
+
 
