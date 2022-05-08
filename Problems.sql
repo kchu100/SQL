@@ -78,14 +78,18 @@ order by N
 /*
 https://www.hackerrank.com/challenges/challenges/problem?isFullScreen=false
 */
-select *
-from 
+select h.hacker_id, h.name, count(c.challenge_id) as ct
+from hackers as h inner join challenges as c on h.hacker_id = c.hacker_id
+group by h.hacker_id, h.name
+having ct = 
 (
-    select h.hacker_id, h.name, count(c.challenge_id) as ct
-    from hackers as h inner join challenges as c on h.hacker_id = c.hacker_id
-    group by h.hacker_id, h.name
-    order by ct desc, h.hacker_id
-) as t
+    select count(challenge_id) as co
+    from challenges
+    group by hacker_id
+    order by co desc
+    limit 1
+)
+order by ct desc, h.hacker_id
 
 
 
