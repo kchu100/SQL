@@ -89,6 +89,18 @@ having ct =
     order by co desc
     limit 1
 )
+or ct in 
+(
+    select t.cnt
+    from 
+    (
+        select count(*) as cnt
+        from challenges 
+        group by hacker_id
+    ) as t
+    group by t.cnt
+    having count(t.cnt) = 1
+)
 order by ct desc, h.hacker_id
 
 
