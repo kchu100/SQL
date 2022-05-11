@@ -76,7 +76,16 @@ order by N
 
 
 /*
-https://www.hackerrank.com/challenges/challenges/problem?isFullScreen=false
+Julia asked her students to create some coding challenges. 
+Write a query to print the hacker_id, name, and the total number of challenges created by each student. 
+Sort your results by the total number of challenges in descending order. 
+If more than one student created the same number of challenges, then sort the result by hacker_id. 
+If more than one student created the same number of challenges and the count is less than the maximum number of challenges created, 
+then exclude those students from the result.
+
+Tables
+Hackers: hacker_id, name
+Challenges: challenge_id, hacker_id
 */
 select h.hacker_id, h.name, count(c.challenge_id) as ct
 from hackers as h inner join challenges as c on h.hacker_id = c.hacker_id
@@ -104,7 +113,30 @@ or ct in
 order by ct desc, h.hacker_id
 
 
+/*
+You did such a great job helping Julia with her last coding contest challenge that she wants you to work on this one, too!
+The total score of a hacker is the sum of their maximum scores for all of the challenges. 
+Write a query to print the hacker_id, name, and total score of the hackers ordered by the descending score. 
+If more than one hacker achieved the same total score, then sort the result by ascending hacker_id. 
+Exclude all hackers with a total score of  from your result.
 
+Tables
+Hackers: hacker_id, name
+Submissions: submission_id, hacker_id, challenge_id, score
+*/
+select h.hacker_id, h.name, sum(t.ma) as su
+from 
+hackers as h inner join
+(
+    select s1.hacker_id,
+    case 
+        when s1.challenge_id = s2.challenge_id then max(s1.score) end as ma
+    from submissions as s1 left outer join submissions as s2 on s1.hacker_id = s2.hacker_id
+    group by s1.challenge_id, s1.hacker_id, s2.challenge_id
+) as t on h.hacker_id = t.hacker_id
+group by h.hacker_id, h.name
+having su > 0
+order by su desc, h.hacker_id asc
 
 
 
