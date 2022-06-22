@@ -1,6 +1,11 @@
+
 # SQL  
 Tables are 0-indexed  
 -----------------------------***SQL Commands***---------------------------------  
+***Data Definition Language (DDL):***  
+***Data Manipulation Language (DML):***  
+***Data Query Language (DQL):***  
+
 ***SELECT*** - extracts data from a database  
 ***UPDATE*** - updates data in a database  
 &emsp;&emsp; UPDATE table_name  
