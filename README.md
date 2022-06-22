@@ -1,3 +1,17 @@
+# Databases  
+A database is an organized collection of data where the data is stored and organized to serve some specific purpose.   
+**Database Management System(DBMS):** collection of application programs which allow the user to restore and retrieve information about data as efficiently as possible.  
+**Relational Database Management System(RDBMS):** is a relational model of data that is stored in databases in separate tables with a common column.  
+
+**3 types of relationships:**  
+&emsp;&emsp; **One-to-one:** One table has a relationship with another table having the similar kind of column.  
+&emsp;&emsp;&emsp; Each primary key relates to only one or no record in the related table.  
+&emsp;&emsp; **One-to-many:** One table has a relationship with another table that has primary and foreign key relations.  
+&emsp;&emsp;&emsp; The primary key table contains only one record that relates to none, one or many records in the related table.  
+&emsp;&emsp; **Many-to-many:** Each record in both the tables can relate to many numbers of records in another table.  
+
+**Normalization:** process of removing redundant data by splitting the table in a well-defined maner. Saves storage space.  
+**De-Normalization:** process of adding up redundant data to speed up complex queries in order to acheive better performance.  
 
 # SQL  
 **What is SQL?**  
@@ -99,8 +113,8 @@ Returning a table:
 &emsp;&emsp;&emsp; SELECT *  
 &emsp;&emsp;&emsp; FROM city  
 &emsp;&emsp;&emsp; WHERE city.long > @long;  
------------------------------***MySQL***-------------------------------------------  
  
+# MySQL   
 
 
 
