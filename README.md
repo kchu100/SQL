@@ -1,10 +1,20 @@
 
 # SQL  
+**What is SQL?**  
+Structured Query language, SQL is an ANSI(American National Standard Institute)  
+standard programming language that is designed specifically for storing and managing the data  
+in the relational database management system (RDBMS) using all kinds of data operations.  
+
 Tables are 0-indexed  
 -----------------------------***SQL Commands***---------------------------------  
-***Data Definition Language (DDL):***  
-***Data Manipulation Language (DML):***  
-***Data Query Language (DQL):***  
+***Data Definition Language (DDL):*** used to define the structure that holds the data  
+&emsp;&emsp; - CREATE, ALTER, TRUNCATE, DROP, RENAME  
+***Data Manipulation Language (DML):***  used to modify the data of the database  
+&emsp;&emsp; - INSERT, UPDATE, DELETE, MERGE  
+***Data Query Language (DQL):***  used to retrieve data from a table  
+&emsp;&emsp; - SELECT  
+***Data Control Language (DCL):***  used to control the visability of the data in the database like revoke access permission  
+&emsp;&emsp; - COMMMIT, ROLLBACK, SAVEPOINT  
 
 ***SELECT*** - extracts data from a database  
 ***UPDATE*** - updates data in a database  
