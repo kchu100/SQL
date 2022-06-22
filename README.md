@@ -117,17 +117,107 @@ Returning a table:
 &emsp;&emsp;&emsp; WHERE city.long > @long;  
  
 # MySQL   
+FIELD():  
+&emsp;&emsp; returns the index position of a value in a list of values  
 
+weekday():   
+&emsp;&emsp; - 0 = Monday, 1 = Tuesday, ... 6 = Sunday
+dayofweek():  
+&emsp;&emsp; - 1 = Sunday, 2 = Monday, ... 7 = Saturday 
 
+binary (in a where clause):  
+&emsp;&emsp; - converts a value to a binary string  
+&emsp;&emsp; - this binary value is a series of  bytes (byte array)  
 
+if(condition, value if true, value if false)  
+&emsp;&emsp; - if statement  
 
+if(condition, value if true, if(condition, value if true, value if false))  
+&emsp;&emsp; - nested if statement  
 
+group_concat():  
+&emsp; - concatenates data from multiple rows into one field  
+&emsp;&emsp; - is essentially a group by  
+&emsp;&emsp; - has 3 clauses:  
+&emsp;&emsp;&emsp; 1. distinct  
+&emsp;&emsp;&emsp;&emsp; select group_concat(distinct column_name)  
+&emsp;&emsp;&emsp;&emsp; from table_name;  
+&emsp;&emsp;&emsp; 2. order by   
+&emsp;&emsp;&emsp; 3. separator: automatically separates the values by operator  
+&emsp;&emsp;&emsp;&emsp; select group_concat(distinct column_name order by column_name separator <'string literal'>)  
 
+str_to_date([tring], [format]), date_format([date], [format]):  
+&emsp;&emsp; - strr_to_date = returns a date based on a string and format   
+&emsp;&emsp; - date_format = formats a date   
+&emsp;&emsp; - format to use, can be one or a combination:    
+&emsp;&emsp;&emsp; %a	Abbreviated weekday name (Sun to Sat)    
+&emsp;&emsp;&emsp; %b	Abbreviated month name (Jan to Dec)    
+&emsp;&emsp;&emsp; %c	Numeric month name (0 to 12)    
+&emsp;&emsp;&emsp; %D	Day of the month as a numeric value, followed by suffix (1st, 2nd, 3rd, ...)    
+&emsp;&emsp;&emsp; %d	Day of the month as a numeric value (01 to 31)   
+&emsp;&emsp;&emsp; %e	Day of the month as a numeric value (0 to 31)   
+&emsp;&emsp;&emsp; %f	Microseconds (000000 to 999999)   
+&emsp;&emsp;&emsp; %H	Hour (00 to 23)   
+&emsp;&emsp;&emsp; %h	Hour (00 to 12)    
+&emsp;&emsp;&emsp; %I	Hour (00 to 12)                                 
+&emsp;&emsp;&emsp; %i	Minutes (00 to 59)                   
+&emsp;&emsp;&emsp; %j	Day of the year (001 to 366)     
+&emsp;&emsp;&emsp; %k	Hour (0 to 23)    
+&emsp;&emsp;&emsp; %l	Hour (1 to 12)  
+&emsp;&emsp;&emsp; %M	Month name in full (January to December)    
+&emsp;&emsp;&emsp; %m	Month name as a numeric value (01 to 12)  
+&emsp;&emsp;&emsp; %p	AM or PM  
+&emsp;&emsp;&emsp; %r	Time in 12 hour AM or PM format (hh:mm:ss AM/PM)  
+&emsp;&emsp;&emsp; %S	Seconds (00 to 59)  
+&emsp;&emsp;&emsp; %s	Seconds (00 to 59)  
+&emsp;&emsp;&emsp; %T	Time in 24 hour format (hh:mm:ss)    
+&emsp;&emsp;&emsp; %U	Week where Sunday is the first day of the week (00 to 53)  
+&emsp;&emsp;&emsp; %u	Week where Monday is the first day of the week (00 to 53)  
+&emsp;&emsp;&emsp; %V	Week where Sunday is the first day of the week (01 to 53). Used with %X  
+&emsp;&emsp;&emsp; %v	Week where Monday is the first day of the week (01 to 53). Used with %X  
+&emsp;&emsp;&emsp; %W	Weekday name in full (Sunday to Saturday)  
+&emsp;&emsp;&emsp; %w	Day of the week where Sunday=0 and Saturday=6  
+&emsp;&emsp;&emsp; %X	Year for the week where Sunday is the first day of the week. Used with %V  
+&emsp;&emsp;&emsp; %x	Year for the week where Monday is the first day of the week. Used with %V  
+&emsp;&emsp;&emsp; %Y	Year as a numeric, 4-digit value  
+&emsp;&emsp;&emsp; %y	Year as a numeric, 2-digit value  
 
+convert(<value> USING <charset>): converts a value into a specified datatype or character set  
+convert(<value>, <type>)  
 
+cast([value] as [datatype]): converts a value into a specified datetype  
+&emsp;&emsp; - converts a value to another type  
+&emsp;&emsp;- type/datatype:  
+&emsp;&emsp;&emsp; DATE		Converts value to DATE. Format: "YYYY-MM-DD"  
+&emsp;&emsp;&emsp; DATETIME	Converts value to DATETIME. Format: "YYYY-MM-DD HH:MM:SS"  
+&emsp;&emsp;&emsp; DECIMAL	Converts value to DECIMAL.  
+&emsp;&emsp;&emsp;Use the optional M and D parameters to specify the maximum number of digits (M) and the number of digits following the decimal point (D).  
+&emsp;&emsp;&emsp;TIME	Converts value to TIME. Format: "HH:MM:SS"  
+&emsp;&emsp;&emsp;CHAR	Converts value to CHAR (a fixed length string)  
+&emsp;&emsp;&emsp;NCHAR	Converts value to NCHAR (like CHAR, but produces a string with the national character set)  
+&emsp;&emsp;&emsp;SIGNED	Converts value to SIGNED (a signed 64-bit integer)  
+&emsp;&emsp;&emsp;UNSIGNED	Converts value to UNSIGNED (an unsigned 64-bit integer)  
+&emsp;&emsp;&emsp;BINARY	Converts value to BINARY (a binary string)  
+&emsp;&emsp; - charset: chaacter set to convert to  
+substring([string], [int1], [int2]):   
+&emsp;&emsp; - extracts a substring from a string  
+&emsp;&emsp;- starts at position int1, extract int2 characters  
+&emsp;&emsp; - 1-indexed  
+substring_index([string], [delimiter], [int]):  
+&emsp;&emsp; - return a substring of a string before a specified number of delimiter occurs  
+&emsp;&emsp; - int: can be positive or negative. number of times to search for the delimiter  
+&emsp;&emsp;&emsp; if positive, reads the string from the left  
+&emsp;&emsp;&emsp; if negative, reads the string from the right  
 
+**Small example using while loop with declare and a set**  
+declare @q int;  
+set @q = 1;  
 
-
+while @q <= 20  
+begin  
+&emsp; print replicate('* ', @q)  
+&emsp; set @q += 1;  
+end;  
 
 
 
