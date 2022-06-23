@@ -21,6 +21,9 @@ Structured Query language, SQL is an ANSI(American National Standard Institute)
 standard programming language that is designed specifically for storing and managing the data  
 in the relational database management system (RDBMS) using all kinds of data operations.  
 
+**Indexes** are used to retrieve data from the database more quickly. Users can not see indexes.  
+They are just used to speed up searches/queries.  
+
 Tables are 0-indexed  
 -----------------------------***SQL Commands***---------------------------------  
 ***Data Definition Language (DDL):*** used to define the structure that holds the data  
@@ -48,8 +51,10 @@ Tables are 0-indexed
 ***ALTER TABLE*** - add, delete, or modify columns of existing table  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; can also be used to add and drop various constraints  
 ***DROP TABLE***   
-***CREATE INDEX***
-***DROP INDEX***  
+***CREATE INDEX*** - Duplicate values are allowed.  
+&emsp;&emsp; CREATE INDEX index_name ON table_name (column1, column2, ...)  
+***CREATE UNIUQUE INDEX*** - Duplicate values are not allowed.  
+***DROP INDEX*** - DROP INDEX table_name.index_name  
 ***DROP COLUMN***  
 &emsp;&emsp; ALTER TABLE table_name  
 &emsp;&emsp; DROP COLUMN column_name;  
