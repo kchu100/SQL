@@ -47,10 +47,10 @@ Tables are 0-indexed
 ***CREATE TABLE*** - creates a new table  
 ***ALTER TABLE*** - add, delete, or modify columns of existing table  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; can also be used to add and drop various constraints  
-***DROP TABLE*** - deletes a table  
-***CREATE INDEX*** - creates an index (search key)  
-***DROP INDEX*** - deletes an index  
-***DROP COLUMN*** - delete a column  
+***DROP TABLE***   
+***CREATE INDEX***
+***DROP INDEX***  
+***DROP COLUMN***  
 &emsp;&emsp; ALTER TABLE table_name  
 &emsp;&emsp; DROP COLUMN column_name;  
 ***IN, NOT IN*** - specify multiple values in a where clause  
