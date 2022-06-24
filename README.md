@@ -33,7 +33,9 @@ Tables are 0-indexed
 ***Data Query Language (DQL):***  used to retrieve data from a table  
 &emsp;&emsp; - SELECT  
 ***Data Control Language (DCL):***  used to control the visability of the data in the database like revoke access permission  
-&emsp;&emsp; - COMMMIT, ROLLBACK, SAVEPOINT  
+&emsp;&emsp; - GRANT, REVOKE  
+***Transaction Control Language (TCL):*** used to manage the changes made by DML statements. Allows statements to be grouped together into logical transactions.  
+&emsp;&emsp; - COMMIT, SAVEPOINT, ROLLBACK  
 
 ***SELECT*** - extracts data from a database  
 ***UPDATE*** - updates data in a database  
