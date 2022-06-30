@@ -134,7 +134,7 @@ IS_IPV4():
 &emsp;&emsp;&emsp; Each integer must be between 0 and 255. Should not be any leading zeros.  
 
 weekday():   
-&emsp;&emsp; - 0 = Monday, 1 = Tuesday, ... 6 = Sunday
+&emsp;&emsp; - 0 = Monday, 1 = Tuesday, ... 6 = Sunday  
 dayofweek():  
 &emsp;&emsp; - 1 = Sunday, 2 = Monday, ... 7 = Saturday 
 
