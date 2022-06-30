@@ -127,6 +127,12 @@ Returning a table:
 FIELD():  
 &emsp;&emsp; returns the index position of a value in a list of values  
 
+IS_IPV4():
+&emsp;&emsp; used to chck whether a specifid string is a valid IPv4 address  
+&emsp;&emsp; If it is valid, it will return 1. Otherwise, return 0.  
+&emsp;&emsp; IPv4 addresses = in the format of four 8-bit integers separated by a '.'  
+&emsp;&emsp;&emsp; Each integer must be between 0 and 255. Should not be any leading zeros.  
+
 weekday():   
 &emsp;&emsp; - 0 = Monday, 1 = Tuesday, ... 6 = Sunday
 dayofweek():  
