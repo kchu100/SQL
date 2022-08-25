@@ -1,20 +1,55 @@
+/*
+Table: Person
++-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| id          | int     |
+| email       | varchar |
++-------------+---------+
+id is the primary key column for this table.
+Each row of this table contains an email. The emails will not contain uppercase letters.
+Write an SQL query to report all the duplicate emails.
+Return the result table in any order.
+Example 1:
+Input: 
+Person table:
++----+---------+
+| id | email   |
++----+---------+
+| 1  | a@b.com |
+| 2  | c@d.com |
+| 3  | a@b.com |
++----+---------+
+Output: 
++---------+
+| Email   |
++---------+
+| a@b.com |
++---------+
+Explanation: a@b.com is repeated two times.
+*/
+select email as Email
+from Person
+group by email
+having count(email) > 1
 
-  /*
-  Extract from XML
-  https://app.codesignal.com/arcade/db/specialties/GvJFyTbHdFqWtXTxc
-  */
-  select ExtractValue(xml_doc, 'catalog/book[1]/author') as author 
-	from catalogs
-	order by author;
-  
-  
-  /*
-  Calculate the distance between two points then total up the sum
-  https://app.codesignal.com/arcade/db/join-us-at-the-table/hYeHdGQAtPEXYxXaf
-  */
-   select round(sum(sqrt(power(c2.x - c1.x, 2) + power(c2.y - c1.y, 2))), 9) as total
-    from cities as c1, cities as c2
-    where c2.id - c1.id = 1;
+
+/*
+Extract from XML
+https://app.codesignal.com/arcade/db/specialties/GvJFyTbHdFqWtXTxc
+*/
+select ExtractValue(xml_doc, 'catalog/book[1]/author') as author 
+from catalogs
+order by author;
+
+
+/*
+Calculate the distance between two points then total up the sum
+https://app.codesignal.com/arcade/db/join-us-at-the-table/hYeHdGQAtPEXYxXaf
+*/
+select round(sum(sqrt(power(c2.x - c1.x, 2) + power(c2.y - c1.y, 2))), 9) as total
+from cities as c1, cities as c2
+where c2.id - c1.id = 1;
 
 
 /*
