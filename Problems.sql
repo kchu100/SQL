@@ -1,4 +1,7 @@
 /*
+Write an SQL query to delete all the duplicate emails, keeping only one unique email with the smallest id. 
+Note that you are supposed to write a DELETE statement and not a SELECT one.
+After running your script, the answer shown is the Person table. The final order of the Person table does not matter.
 Table: Person
 +-------------+---------+
 | Column Name | Type    |
@@ -8,8 +11,42 @@ Table: Person
 +-------------+---------+
 id is the primary key column for this table.
 Each row of this table contains an email. The emails will not contain uppercase letters.
+Example 1:
+Input: 
+Person table:
++----+------------------+
+| id | email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
+| 3  | john@example.com |
++----+------------------+
+Output: 
++----+------------------+
+| id | email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
++----+------------------+
+Explanation: john@example.com is repeated two times. We keep the row with the smallest Id = 1.
+*/
+delete p1
+from person as p1 inner join person as p2
+where p1.id > p2.id and p1.email = p2.email
+
+
+/*
 Write an SQL query to report all the duplicate emails.
 Return the result table in any order.
+Table: Person
++-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| id          | int     |
+| email       | varchar |
++-------------+---------+
+id is the primary key column for this table.
+Each row of this table contains an email. The emails will not contain uppercase letters.
 Example 1:
 Input: 
 Person table:
