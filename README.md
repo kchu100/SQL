@@ -122,6 +122,14 @@ Returning a table:
 &emsp;&emsp;&emsp; SELECT *  
 &emsp;&emsp;&emsp; FROM city  
 &emsp;&emsp;&emsp; WHERE city.long > @long;  
+
+***Stored Procedures***  
+Is a prepared code that can be saved and can be used over and over again.  
+IF the same query gets used again and again, just store in a stored procedure.  
+Can pass parameters  
+Syntax:
+&emsp;&emsp; To create the procedure: CREATE PROCEDURE procedure_name AS sql_statement GO;  
+&emsp;&emsp; To exeucte the procedure: EXEC procedure_name;  
  
 # MySQL   
 FIELD():  
