@@ -13,6 +13,7 @@ A database is an organized collection of data where the data is stored and organ
 &emsp;&emsp; **Many-to-many:** Each record in both the tables can relate to many numbers of records in another table.  
 
 **Normalization:** process of removing redundant data by splitting the table in a well-defined maner. Saves storage space.  
+&emsp;&emsp; 
 **De-Normalization:** process of adding up redundant data to speed up complex queries in order to acheive better performance.  
 
 # SQL  
