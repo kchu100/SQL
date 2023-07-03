@@ -213,3 +213,26 @@ select product_id, "store3" as store, store3 as price
 from products
 where store3 is not null
 
+/*
+Find matching hosts and guests pairs in a way that they are both of the same gender and nationality.
+Output the host id and the guest id of matched pair.
+Tables: airbnb_hosts, airbnb_guests
+airbnb_hosts
+host_id: int
+nationality: varchar
+gender: varchar
+age: int
+----------------------
+airbnb_guests
+guest_id: int
+nationality: varchar
+gender: varchar
+age: int
+*/
+
+select distinct host_id, guest_id
+from airbnb_hosts as h inner join airbnb_guests as g
+using(nationality, gender); 
+/*"using" CAN ONLY be used in MySQL ----- In MS SQL Server: "on h.nationality = g.nationalist and h.gender = g.gender"
+
+
