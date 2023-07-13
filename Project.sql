@@ -1,3 +1,36 @@
+--Kevin Chu
+--CSC 315 Final Project
+--====================================================================
+--Description and Requirements========================================
+--====================================================================
+Destiny 2 is a first-person looter shooter sci-fi MMO that is developed and published by Bungie. It is a 
+multi-platform game in which can be played on PlayStation, Xbox and PC. In the game, it is essentially a
+war between Light and Dark. The Light is emitted by the Traveler (a big sphere) and the Darkness is by 
+the Pyramids. You, as a player, is resurrected by a Ghost (who is a companion and was forged with Light 
+by the Traveler) will protect all of humanity from the Darkness. As you are resurrected by a Ghost of Light, 
+you have became a Guardian. Guardians are essentially immortal. Guardians will gain power from the Traveler 
+in order to protect humanity. As a Guardian, there are 3 different classes. 
+
+You can play as a Hunter, Titan, or a Warlock. Each of these classes are unique and have different subclasses. 
+Subclasses have 4 different elements: arc, solar, void and stasis. The arc, solar, and void subclasses are made
+from the Light, while stasis is a Darkness subclass. Each Light subclass are subdivided into 3 different subtrees 
+and each of these trees are played in a different way depending on the situation. As with each subclass, Hunters
+have Arcstrider, Gunslinger, Nightstalker and Revenant; Titans have Striker, Sunbreaker, Sentinel and Behemoth; 
+Warlocks have Stormcaller, Dawnblade, Voidwalker and Shadebinder, respectively on element. 
+
+Apart from subclasses, there are different weapons that we could use. Weapons can also have elements just like
+subclasses do, including stasis. As for the weapon setup, there are kinetic, energy and power weapons. Kinetic 
+weapons do not have an element while energy and power weapons have an element. Each of these weapons take different 
+ammo types: primary, special, and heavy. All weapons have different stats that vary with each other. The stats that 
+describe the weapons are impact, range, stability, handling, reload speed, rounds per  minute, magazine and its 
+intrinsic perk. The intrinsic perks can be determined by their rounds per minute. With the description of each 
+weapon, there also need to have different classes of weapons, which there are a total of 16. Weapons have different 
+rarities: uncommon, rare, legendary and exotic. Exotic weapons can not be equipped alongside another exotic weapon 
+as only one exotic is allowed to be equipped. Each exotic have a unique intrinsic perk that separates them from 
+other exotics. Each of them excel in power depending on the situation it is used in. Legendary weapons are more 
+sought-after and the only weapons to use. They actually have much more variety than Rare weapons do because they 
+can have many different traits. These traits are randomly rolled on each weapon. Rare weapons are a downgrade of 
+Legendaries as do have similar feel to Legendaries but can not have random rolled traits. 
 --====================================================================
 --Relational Schema﻿===================================================
 --====================================================================
