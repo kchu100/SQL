@@ -30,6 +30,20 @@ ON table_name (column1, column2, ...);
 CREATE UNIQUE INDEX index_name  
 ON table_name (column1, column2, ...);  
 
+**The DROP INDEX statement is used to delete an index in a table.**  
+MS Access:  
+DROP INDEX index_name ON table_name;  
+
+SQL Server:  
+DROP INDEX table_name.index_name;  
+
+DB2/Oracle:  
+DROP INDEX index_name;  
+
+MySQL:  
+ALTER TABLE table_name  
+DROP INDEX index_name;  
+
 Tables are 0-indexed  
 -----------------------------***SQL Commands***---------------------------------  
 ***Data Definition Language (DDL):*** used to define the structure that holds the data  
