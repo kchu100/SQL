@@ -24,6 +24,11 @@ in the relational database management system (RDBMS) using all kinds of data ope
 
 **Indexes** are used to retrieve data from the database more quickly. Users can not see indexes.  
 They are just used to speed up searches/queries.  
+CREATE INDEX index_name  
+ON table_name (column1, column2, ...);  
+**No duplicate values**  
+CREATE UNIQUE INDEX index_name  
+ON table_name (column1, column2, ...);  
 
 Tables are 0-indexed  
 -----------------------------***SQL Commands***---------------------------------  
