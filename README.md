@@ -24,7 +24,12 @@ in the relational database management system (RDBMS) using all kinds of data ope
 
 **Indexes** are used to retrieve data from the database more quickly. Users can not see indexes.  
 They are just used to speed up searches/queries.  
-CREATE INDEX index_name  
+**CLustered Indexes:** sort and store the data rows in the table or view based on their key values. There can only be ONE per table.  
+**Nonclustered Indexes:** contains key values and each key value entry has a pointer to the data row that contains the key value. This pointer is called the row locator.  
+&emsp;&emsp;&emsp; The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table. For a heap, a row locator is a pointer to the row.  
+&emsp;&emsp;&emsp; For a clustered table, the row locator is the clustered index key.  
+
+CREATE (CLUSTERED or NONCLUSTERED) INDEX index_name  
 ON table_name (column1, column2, ...);  
 **No duplicate values**  
 CREATE UNIQUE INDEX index_name  
