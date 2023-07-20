@@ -29,6 +29,7 @@ They are just used to speed up searches/queries.
 **Nonclustered Indexes:** contains key values and each key value entry has a pointer to the data row that contains the key value. This pointer is called the row locator.  
 The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table.  
 For a heap, a row locator is a pointer to the row. For a clustered table, the row locator is the clustered index key.  
+If there is no clustered index, the row locator is a pointer to the row. When there is a clustered index present, the row locator is the clustered index key for the row.  
 
 CREATE (CLUSTERED or NONCLUSTERED) INDEX index_name  
 ON table_name (column1, column2, ...);  
