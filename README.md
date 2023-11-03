@@ -91,7 +91,14 @@ Tables are 0-indexed
 &emsp;&emsp; select *  
 &emsp;&emsp; from table_name  
 &emsp;&emsp; where column_name IN (values...)  
-***row_number()*** OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
+
+***ROW_NUMBER()*** function numbers the output of a result set.  
+It returns a sequential number of a row within a partition of a result set, starting at 1.  
+Syntax: ***row_number()*** OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )   
+&emsp;&emsp; ***PARTITION BY:*** Divides the result set produced by the FROM clause into partitions to which the ROW_NUMBER function is applied.   
+&emsp;&emsp; value_expression specifies the column by which the result set is partitioned.   
+&emsp;&emsp; If PARTITION BY is not specified, the function treats all rows of the query result set as a single group.  
+&emsp;&emsp; ***ORDER BY*** is required. It determines the sequence in which rows are assigned.  
 
 The ***SELECT TOP*** clause is used to specify the number of records to return.  
 The ***SELECT TOP*** clause is useful on large tables with thousands of records.  
