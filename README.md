@@ -91,6 +91,7 @@ Tables are 0-indexed
 &emsp;&emsp; select *  
 &emsp;&emsp; from table_name  
 &emsp;&emsp; where column_name IN (values...)  
+***row_number()*** OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 
 The ***SELECT TOP*** clause is used to specify the number of records to return.  
 The ***SELECT TOP*** clause is useful on large tables with thousands of records.  
