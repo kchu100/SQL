@@ -248,7 +248,6 @@ For tie breaker use alphabetical order of the user usernames.
 select from_user, count(from_user) as total_emails, row_number() over (order by count(*) desc, from_user asc) as row_number
 from google_gmail_emails
 group by from_user
-order by total_emails desc, from_user asc
 
 
 
