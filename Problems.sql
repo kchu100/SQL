@@ -200,7 +200,6 @@ Output:
 | 1          | store3 | 80    |
 +------------+--------+-------+
 */
-
 select product_id, "store1" as store, store1 as price
 from products
 where store1 is not null
@@ -213,6 +212,7 @@ select product_id, "store3" as store, store3 as price
 from products
 where store3 is not null
 
+    
 /*
 Find matching hosts and guests pairs in a way that they are both of the same gender and nationality.
 Output the host id and the guest id of matched pair.
@@ -233,6 +233,30 @@ age: int
 select distinct host_id, guest_id
 from airbnb_hosts as h inner join airbnb_guests as g
 using(nationality, gender); 
-/*"using" CAN ONLY be used in MySQL ----- In MS SQL Server: "on h.nationality = g.nationalist and h.gender = g.gender"
+/*"using" CAN ONLY be used in MySQL ----- In MS SQL Server: "on h.nationality = g.nationalist and h.gender = g.gender"*/
+
+
+/*
+Find the email activity rank for each user. Email activity rank is defined by the total number of emails sent. 
+The user with the highest number of emails sent will have a rank of 1, and so on. 
+Output the user, total emails, and their activity rank. 
+Order records by the total emails in descending order. 
+Sort users with the same number of emails in alphabetical order.
+In your rankings, return a unique value (i.e., a unique rank) even if multiple users have the same number of emails.
+For tie breaker use alphabetical order of the user usernames.
+*/
+select from_user, count(from_user) as total_emails, row_number() over (order by count(*) desc, from_user asc) as row_number
+from google_gmail_emails
+group by from_user
+order by total_emails desc, from_user asc
+
+
+
+
+
+
+
+
+
 
 
