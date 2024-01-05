@@ -250,9 +250,35 @@ from google_gmail_emails
 group by from_user
 
 
-
-
-
+/*
+Find all numbers that appear at least three times consecutively.
+Return the result table in any order.
+The result format is in the following example.
+Example 1:
+Input: 
+Logs table:
++----+-----+
+| id | num |
++----+-----+
+| 1  | 1   |
+| 2  | 1   |
+| 3  | 1   |
+| 4  | 2   |
+| 5  | 1   |
+| 6  | 2   |
+| 7  | 2   |
++----+-----+
+Output: 
++-----------------+
+| ConsecutiveNums |
++-----------------+
+| 1               |
+Explanation: 1 is the only number that appears consecutively for at least three times.
+*/
+/*This is essentially checking if the next num and the following num is the same as the first*/
+SELECT distinct Num as ConsecutiveNums
+FROM Logs
+WHERE (Id + 1, Num) in (select * from Logs) and (Id + 2, Num) in (select * from Logs)
 
 
 
