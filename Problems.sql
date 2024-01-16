@@ -310,5 +310,10 @@ from employee as e inner join department as d on e.departmentid = d.id
 where (e.departmentId, e.salary) in (select departmentId, max(salary) from employee group by departmentId)
 
 /*Department Top 3 Highest Salary*/
-
+select Department, Employee, Salary from 
+(
+    select d.name as Department, e.name as Employee, e.salary as Salary, dense_rank() over (partition by d.name order by e.salary desc) as r
+    from employee as e left join department as d on e.departmentid = d.id
+) as t1
+where r  < 4
 
