@@ -12,8 +12,10 @@ Each primary key relates to only one or no record in the related table.
 The primary key table contains only one record that relates to none, one or many records in the related table.  
 - **Many-to-many:** Each record in both the tables can relate to many numbers of records in another table.  
 
-**Normalization:** process of removing redundant data by splitting the table in a well-defined maner. Saves storage space.  
-**De-Normalization:** process of adding up redundant data to speed up complex queries in order to acheive better performance.  
+**Normalization:**  
+- process of removing redundant data by splitting the table in a well-defined maner. Saves storage space.  
+**De-Normalization:**
+- process of adding up redundant data to speed up complex queries in order to acheive better performance.  
 
 # SQL  
 **What is SQL?**  
