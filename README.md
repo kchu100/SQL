@@ -34,7 +34,8 @@ If there is no clustered index, the row locator is a pointer to the row. When th
 - A window function performs a calculation across a set of table rows that are somehow related to the current row.  
 This is comparable to the type of calculation that can be done with an aggregate function.  
 But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row — the rows retain their separate identities.  
-Behind the scenes, the window function is able to access more than just the current row of the query result.  
+Behind the scenes, the window function is able to access more than just the current row of the query result.
+
 **Types**  
 - Row_number(): will always start at 1 then increase by 1  
 - Rank(): would give the identical rows a rank of 2, then skip ranks 3 and 4, so the next result would be 5  
