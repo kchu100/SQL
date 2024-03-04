@@ -46,14 +46,18 @@ ON table_name (column1, column2, ...);
 
 ***Window Functions***  
 - A window function performs a calculation across a set of table rows that are somehow related to the current row.  
-This is comparable to the type of calculation that can be done with an aggregate function.  
-But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row — the rows retain their separate identities.  
-Behind the scenes, the window function is able to access more than just the current row of the query result.
+- This is comparable to the type of calculation that can be done with an aggregate function.  
+- But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row — the rows retain their separate identities.  
+- Behind the scenes, the window function is able to access more than just the current row of the query result.
 
 **Types**  
 - Row_number(): will always start at 1 then increase by 1  
 - Rank(): would give the identical rows a rank of 2, then skip ranks 3 and 4, so the next result would be 5  
 - Dense_rank():  same as row_number(), but rows with duplicates will not increase instead will keep the number; no ranks will be skipped
+
+Syntax: ***row_number()*** OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
+- PARTITION BY not required
+- ORDER BY required  
 
 - lag(): pulls from previous rows  
 - lead(): pulls from following rows  
@@ -112,14 +116,6 @@ Tables are 0-indexed
 &emsp;&emsp; select *  
 &emsp;&emsp; from table_name  
 &emsp;&emsp; where column_name IN (values...)  
-
-***ROW_NUMBER()*** function numbers the output of a result set.  
-It returns a sequential number of a row within a partition of a result set, starting at 1.  
-Syntax: ***row_number()*** OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )   
-&emsp;&emsp; ***PARTITION BY:*** Divides the result set produced by the FROM clause into partitions to which the ROW_NUMBER function is applied.   
-&emsp;&emsp; value_expression specifies the column by which the result set is partitioned.   
-&emsp;&emsp; If PARTITION BY is not specified, the function treats all rows of the query result set as a single group.  
-&emsp;&emsp; ***ORDER BY*** is required. It determines the sequence in which rows are assigned.  
 
 The ***SELECT TOP*** clause is used to specify the number of records to return.  
 The ***SELECT TOP*** clause is useful on large tables with thousands of records.  
