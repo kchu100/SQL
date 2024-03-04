@@ -13,12 +13,11 @@ A database is an organized collection of data where the data is stored and organ
 &emsp;&emsp; **Many-to-many:** Each record in both the tables can relate to many numbers of records in another table.  
 
 **Normalization:** process of removing redundant data by splitting the table in a well-defined maner. Saves storage space.  
-&emsp;&emsp; 
 **De-Normalization:** process of adding up redundant data to speed up complex queries in order to acheive better performance.  
 
 # SQL  
 **What is SQL?**  
-Structured Query language, SQL is an ANSI(American National Standard Institute)  
+- Structured Query language, SQL is an ANSI(American National Standard Institute)  
 standard programming language that is designed specifically for storing and managing the data  
 in the relational database management system (RDBMS) using all kinds of data operations.  
 
@@ -30,6 +29,19 @@ They are just used to speed up searches/queries.
 The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table.  
 For a heap, a row locator is a pointer to the row. For a clustered table, the row locator is the clustered index key.  
 If there is no clustered index, the row locator is a pointer to the row. When there is a clustered index present, the row locator is the clustered index key for the row.  
+
+***Window Functions***  
+- A window function performs a calculation across a set of table rows that are somehow related to the current row.  
+This is comparable to the type of calculation that can be done with an aggregate function.  
+But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row — the rows retain their separate identities.  
+Behind the scenes, the window function is able to access more than just the current row of the query result.  
+**Types**  
+- Row_number(): will always start at 1 then increase by 1  
+- Rank(): would give the identical rows a rank of 2, then skip ranks 3 and 4, so the next result would be 5  
+- Dense_rank():  same as row_number(), but rows with duplicates will not increase instead will keep the number; no ranks will be skipped
+
+- lag(): pulls from previous rows  
+- lead(): pulls from following rows  
 
 CREATE (CLUSTERED or NONCLUSTERED) INDEX index_name  
 ON table_name (column1, column2, ...);  
