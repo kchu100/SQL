@@ -51,7 +51,7 @@ Behind the scenes, the window function is able to access more than just the curr
 
 - lag(): pulls from previous rows  
 - lead(): pulls from following rows  
-# --------------------------------------------------------------------------------  
+# -------------------------------------------------------------------------- 
 CREATE (CLUSTERED or NONCLUSTERED) INDEX index_name  
 ON table_name (column1, column2, ...);  
 **No duplicate values**  
