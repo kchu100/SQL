@@ -14,7 +14,7 @@ The primary key table contains only one record that relates to none, one or many
 
 **Normalization:**  
 - process of removing redundant data by splitting the table in a well-defined maner. Saves storage space.  
-**De-Normalization:**  
+**DeNormalization:**  
 - process of adding up redundant data to speed up complex queries in order to acheive better performance.  
 
 # SQL  
