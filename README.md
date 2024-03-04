@@ -1,9 +1,9 @@
 # Databases  
 A database is an organized collection of data where the data is stored and organized to serve some specific purpose.   
 **Database Management System(DBMS):** collection of application programs which allow the user to restore and retrieve information about data as efficiently as possible.  
-&emsp;&emsp; - MySQL, Oracle, Sybase  
+- MySQL, Oracle, Sybase  
 **Relational Database Management System(RDBMS):** is a relational model of data that is stored in databases in separate tables with a common column.  
-&emsp;&emsp; - SQL  
+- SQL  
 
 **3 types of relationships:**  
 - **One-to-one:** One table has a relationship with another table having the similar kind of column.  
@@ -28,7 +28,8 @@ in the relational database management system (RDBMS) using all kinds of data ope
 **Clustered Indexes:** 
 - sort and store the data rows in the table or view based on their key values. There can only be ONE per table. Primary Key by default.  
 
-**Nonclustered Indexes:** contains key values and each key value entry has a pointer to the data row that contains the key value. This pointer is called the row locator.  
+**Nonclustered Indexes:** 
+- contains key values and each key value entry has a pointer to the data row that contains the key value. This pointer is called the row locator.  
 The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table.  
 For a heap, a row locator is a pointer to the row. For a clustered table, the row locator is the clustered index key.  
 If there is no clustered index, the row locator is a pointer to the row. When there is a clustered index present, the row locator is the clustered index key for the row.  
