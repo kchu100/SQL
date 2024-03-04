@@ -34,9 +34,15 @@ in the relational database management system (RDBMS) using all kinds of data ope
 
 **Nonclustered Indexes:** 
 - contains key values and each key value entry has a pointer to the data row that contains the key value. This pointer is called the row locator.  
-The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table.  
-For a heap, a row locator is a pointer to the row. For a clustered table, the row locator is the clustered index key.  
-If there is no clustered index, the row locator is a pointer to the row. When there is a clustered index present, the row locator is the clustered index key for the row.  
+- The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table.  
+- For a heap, a row locator is a pointer to the row. For a clustered table, the row locator is the clustered index key.  
+- If there is no clustered index, the row locator is a pointer to the row. When there is a clustered index present, the row locator is the clustered index key for the row.  
+
+CREATE (CLUSTERED or NONCLUSTERED) INDEX index_name  
+ON table_name (column1, column2, ...);  
+**No duplicate values**  
+CREATE UNIQUE INDEX index_name  
+ON table_name (column1, column2, ...);  
 
 ***Window Functions***  
 - A window function performs a calculation across a set of table rows that are somehow related to the current row.  
@@ -52,12 +58,6 @@ Behind the scenes, the window function is able to access more than just the curr
 - lag(): pulls from previous rows  
 - lead(): pulls from following rows  
 # -------------------------------------------------------------------------- 
-CREATE (CLUSTERED or NONCLUSTERED) INDEX index_name  
-ON table_name (column1, column2, ...);  
-**No duplicate values**  
-CREATE UNIQUE INDEX index_name  
-ON table_name (column1, column2, ...);  
-
 **The DROP INDEX statement is used to delete an index in a table.**  
 MS Access:  
 DROP INDEX index_name ON table_name;  
