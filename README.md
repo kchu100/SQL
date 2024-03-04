@@ -6,11 +6,11 @@ A database is an organized collection of data where the data is stored and organ
 &emsp;&emsp; - SQL  
 
 **3 types of relationships:**  
-&emsp;&emsp; **One-to-one:** One table has a relationship with another table having the similar kind of column.  
-&emsp;&emsp;&emsp; Each primary key relates to only one or no record in the related table.  
-&emsp;&emsp; **One-to-many:** One table has a relationship with another table that has primary and foreign key relations.  
-&emsp;&emsp;&emsp; The primary key table contains only one record that relates to none, one or many records in the related table.  
-&emsp;&emsp; **Many-to-many:** Each record in both the tables can relate to many numbers of records in another table.  
+- **One-to-one:** One table has a relationship with another table having the similar kind of column.  
+Each primary key relates to only one or no record in the related table.  
+- **One-to-many:** One table has a relationship with another table that has primary and foreign key relations.  
+The primary key table contains only one record that relates to none, one or many records in the related table.  
+- **Many-to-many:** Each record in both the tables can relate to many numbers of records in another table.  
 
 **Normalization:** process of removing redundant data by splitting the table in a well-defined maner. Saves storage space.  
 **De-Normalization:** process of adding up redundant data to speed up complex queries in order to acheive better performance.  
@@ -21,9 +21,12 @@ A database is an organized collection of data where the data is stored and organ
 standard programming language that is designed specifically for storing and managing the data  
 in the relational database management system (RDBMS) using all kinds of data operations.  
 
-**Indexes** are used to retrieve data from the database more quickly. Users can not see indexes.  
-They are just used to speed up searches/queries.  
-**CLustered Indexes:** sort and store the data rows in the table or view based on their key values. There can only be ONE per table. Primary Key by default.  
+**Indexes**
+- used to retrieve data from the database more quickly.
+- Users can not see indexes.  
+- they are just used to speed up searches/queries.  
+**Clustered Indexes:** 
+- sort and store the data rows in the table or view based on their key values. There can only be ONE per table. Primary Key by default.  
 
 **Nonclustered Indexes:** contains key values and each key value entry has a pointer to the data row that contains the key value. This pointer is called the row locator.  
 The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table.  
