@@ -27,7 +27,8 @@ in the relational database management system (RDBMS) using all kinds of data ope
 **Indexes**
 - used to retrieve data from the database more quickly.
 - Users can not see indexes.  
-- they are just used to speed up searches/queries.  
+- they are just used to speed up searches/queries.
+  
 **Clustered Indexes:** 
 - sort and store the data rows in the table or view based on their key values. There can only be ONE per table. Primary Key by default.  
 
@@ -50,7 +51,7 @@ Behind the scenes, the window function is able to access more than just the curr
 
 - lag(): pulls from previous rows  
 - lead(): pulls from following rows  
-
+# --------------------------------------------------------------------------------  
 CREATE (CLUSTERED or NONCLUSTERED) INDEX index_name  
 ON table_name (column1, column2, ...);  
 **No duplicate values**  
