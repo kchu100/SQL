@@ -56,11 +56,11 @@ ON table_name (column1, column2, ...);
 - Dense_rank(): rows with duplicates will not increase instead will keep the number; no ranks will be skipped. Ex: 1,2,2,2,3,3,4,5,6,6,7  
 
 Syntax: ***row_number()*** OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
-- PARTITION BY not required
+- PARTITION BY not required (functions similarly as a GROUP BY)  
 - ORDER BY required  
 
-- lag(): pulls from previous rows  
-- lead(): pulls from following rows  
+  lag(): pulls from previous rows  
+  lead(): pulls from following rows  
 # -------------------------------------------------------------------------- 
 **The DROP INDEX statement is used to delete an index in a table.**  
 MS Access:  
