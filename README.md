@@ -51,9 +51,9 @@ ON table_name (column1, column2, ...);
 - Behind the scenes, the window function is able to access more than just the current row of the query result.
 
 **Types**  
-- Row_number(): will always start at 1 then increase by 1  
-- Rank(): would give the identical rows a rank of 2, then skip ranks 3 and 4, so the next result would be 5  
-- Dense_rank():  same as row_number(), but rows with duplicates will not increase instead will keep the number; no ranks will be skipped
+- Row_number(): will always start at 1 then increase by 1 Ex: 1,2,3,4,5,6,7  
+- Rank(): would give the identical rows the same rank. Ex: 1,2,2,4,4,6,7   
+- Dense_rank(): rows with duplicates will not increase instead will keep the number; no ranks will be skipped. Ex: 1,2,2,2,3,3,4,5,6,6,7  
 
 Syntax: ***row_number()*** OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 - PARTITION BY not required
