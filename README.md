@@ -50,17 +50,16 @@ ON table_name (column1, column2, ...);
 - But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row — the rows retain their separate identities.  
 - Behind the scenes, the window function is able to access more than just the current row of the query result.
 
-**Types**  
+**Types**   
+- lag(): pulls from previous rows    
+- lead(): pulls from following rows  
 - Row_number(): will always start at 1 then increase by 1 Ex: 1,2,3,4,5,6,7  
 - Rank(): would give the identical rows the same rank. Ex: 1,2,2,4,4,6,7   
 - Dense_rank(): rows with duplicates will not increase instead will keep the number; no ranks will be skipped. Ex: 1,2,2,2,3,3,4,5,6,6,7  
 
 Syntax: ***row_number()*** OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 - PARTITION BY not required (functions similarly as a GROUP BY)  
-- ORDER BY required  
-
-  lag(): pulls from previous rows  
-  lead(): pulls from following rows  
+- ORDER BY required   
 # -------------------------------------------------------------------------- 
 **The DROP INDEX statement is used to delete an index in a table.**  
 MS Access:  
