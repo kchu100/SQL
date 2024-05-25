@@ -3,7 +3,9 @@ A database is an organized collection of data where the data is stored and organ
 **Database Management System(DBMS):** collection of application programs which allow the user to restore and retrieve information about data as efficiently as possible.  
 - MySQL, Oracle, Sybase  
 **Relational Database Management System(RDBMS):** is a relational model of data that is stored in databases in separate tables with a common column.  
-- SQL  
+- SQL
+
+
 
 **3 types of relationships:**  
 - **One-to-one:** One table has a relationship with another table having the similar kind of column.  
