@@ -56,7 +56,8 @@ in the relational database management system (RDBMS) using all kinds of data ope
   
 **Clustered Indexes:** 
 
-	- sort and store the data rows in the table or view based on their key values. There can only be ONE per table. Primary Key by default.  
+	- sort and store the data rows in the table or view based on their key values.  
+ 	- There can only be ONE per table. Primary Key by default.  
 
 **Nonclustered Indexes:** 
 
