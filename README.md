@@ -5,24 +5,36 @@ A database is an organized collection of data where the data is stored and organ
 **Relational Database Management System(RDBMS):** is a relational model of data that is stored in databases in separate tables with a common column.  
 - SQL
 
+**Dimensional(or Database) schemas:** comprised of one or more tables and the relationships among all the tables in the database  
+**Star and Snowflake schemas**  
+*Star schema:* a type of relational database schema that is composed of a single, central fact table surrounded by dimension tables  
+*Snowflake schema:* consists of one fact table connected to many dimension tables, which can be connected to other dimension tables  
+	
+1. *Fact Table:* stores facts that measure the business like sales, cost of good or profit. Can contain foreign keys to dimension tables.  
+2. *Dimension Table:* stores attributes that describe aspects of a dimension  
+  	- Ex: a time table stores aspects of time like year, quarter, month and day. A foreign key of a fact table references the primary key in dimension table  
+
+
 **Online Analytical Processing(OLAP):** is a software technology that allows users to analyze information from multiple database systems at the same time.  
 5 basic analytical operations:  
-1. **Drill down:**  Less detailed data is converted into highly detailed data  
-	- can be done by moving down in the concept hierarchy or adding a new dimension  
-2. **Roll up:**  opposite of drill down. It performs aggregation on the OLAP cube.  
-	- climbing up in the concept hierarchy or reducing dimentsions  
-3. **Dice:**  selects a sub-cube by selecting two or more dimensions  
-	- essentially makes it simpler and the cube smaller  
-4. **Slice:**  selects a single dimension which results in a new sub-cube section  
-	- cuts a dimension  
-5. **Pivot:** rotates the current view to get a new view of the representation  
+
+	1. Drill down:  Less detailed data is converted into highly detailed data  
+		- can be done by moving down in the concept hierarchy or adding a new dimension  
+	2. Roll up:  opposite of drill down. It performs aggregation on the OLAP cube.  
+		- climbing up in the concept hierarchy or reducing dimentsions  
+	3. Dice:  selects a sub-cube by selecting two or more dimensions  
+		- essentially makes it simpler and the cube smaller  
+	4. Slice:  selects a single dimension which results in a new sub-cube section  
+		- cuts a dimension  
+	5. Pivot: rotates the current view to get a new view of the representation  
 
 **3 types of relationships:**  
-- **One-to-one:** One table has a relationship with another table having the similar kind of column.  
-Each primary key relates to only one or no record in the related table.  
-- **One-to-many:** One table has a relationship with another table that has primary and foreign key relations.  
-The primary key table contains only one record that relates to none, one or many records in the related table.  
-- **Many-to-many:** Each record in both the tables can relate to many numbers of records in another table.  
+
+	1. One-to-one: One table has a relationship with another table having the similar kind of column.  
+	Each primary key relates to only one or no record in the related table.  
+	2. One-to-many: One table has a relationship with another table that has primary and foreign key relations.  
+	The primary key table contains only one record that relates to none, one or many records in the related table.  
+	3. Many-to-many: Each record in both the tables can relate to many numbers of records in another table.  
 
 **Normalization:**  
 - process of removing redundant data by splitting the table in a well-defined maner. Saves storage space.
