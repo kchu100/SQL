@@ -5,7 +5,17 @@ A database is an organized collection of data where the data is stored and organ
 **Relational Database Management System(RDBMS):** is a relational model of data that is stored in databases in separate tables with a common column.  
 - SQL
 
-
+**Online Analytical Processing(OLAP):** is a software technology that allows users to analyze information from multiple database systems at the same time.  
+5 basic analytical operations:  
+1. **Drill down:**  Less detailed data is converted into highly detailed data  
+	- can be done by moving down in the concept hierarchy or adding a new dimension  
+2. **Roll up:**  opposite of drill down. It performs aggregation on the OLAP cube.  
+	- climbing up in the concept hierarchy or reducing dimentsions  
+3. **Dice:**  selects a sub-cube by selecting two or more dimensions  
+	- essentially makes it simpler and the cube smaller  
+4. **Slice:**  selects a single dimension which results in a new sub-cube section  
+	- cuts a dimension  
+5. **Pivot:** rotates the current view to get a new view of the representation  
 
 **3 types of relationships:**  
 - **One-to-one:** One table has a relationship with another table having the similar kind of column.  
