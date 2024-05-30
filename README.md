@@ -49,18 +49,21 @@ standard programming language that is designed specifically for storing and mana
 in the relational database management system (RDBMS) using all kinds of data operations.  
 
 **Indexes**
-- used to retrieve data from the database more quickly.
-- Users can not see indexes.  
-- they are just used to speed up searches/queries.
+
+	- used to retrieve data from the database more quickly.
+	- Users can not see indexes.  
+	- they are just used to speed up searches/queries.
   
 **Clustered Indexes:** 
-- sort and store the data rows in the table or view based on their key values. There can only be ONE per table. Primary Key by default.  
+
+	- sort and store the data rows in the table or view based on their key values. There can only be ONE per table. Primary Key by default.  
 
 **Nonclustered Indexes:** 
-- contains key values and each key value entry has a pointer to the data row that contains the key value. This pointer is called the row locator.  
-- The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table.  
-- For a heap, a row locator is a pointer to the row. For a clustered table, the row locator is the clustered index key.  
-- If there is no clustered index, the row locator is a pointer to the row. When there is a clustered index present, the row locator is the clustered index key for the row.  
+
+	- contains key values and each key value entry has a pointer to the data row that contains the key value. This pointer is called the row locator.  
+	- The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table.  
+	- For a heap, a row locator is a pointer to the row. For a clustered table, the row locator is the clustered index key.  
+	- If there is no clustered index, the row locator is a pointer to the row. When there is a clustered index present, the row locator is the clustered index key for the row.  
 
 CREATE (CLUSTERED or NONCLUSTERED) INDEX index_name  
 ON table_name (column1, column2, ...);  
@@ -69,17 +72,19 @@ CREATE UNIQUE INDEX index_name
 ON table_name (column1, column2, ...);  
 
 ***Window Functions***  
-- A window function performs a calculation across a set of table rows that are somehow related to the current row.  
-- This is comparable to the type of calculation that can be done with an aggregate function.  
-- But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row — the rows retain their separate identities.  
-- Behind the scenes, the window function is able to access more than just the current row of the query result.
+
+	- A window function performs a calculation across a set of table rows that are somehow related to the current row.  
+	- This is comparable to the type of calculation that can be done with an aggregate function.  
+	- But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row — the rows retain their separate identities.  
+	- Behind the scenes, the window function is able to access more than just the current row of the query result.
 
 **Types**   
-- lag(): pulls from previous rows    
-- lead(): pulls from following rows  
-- Row_number(): will always start at 1 then increase by 1 Ex: 1,2,3,4,5,6,7  
-- Rank(): would give the identical rows the same rank. Ex: 1,2,2,4,4,6,7   
-- Dense_rank(): rows with duplicates will not increase instead will keep the number; no ranks will be skipped. Ex: 1,2,2,2,3,3,4,5,6,6,7  
+
+	- lag(): pulls from previous rows    
+	- lead(): pulls from following rows  
+	- Row_number(): will always start at 1 then increase by 1 Ex: 1,2,3,4,5,6,7  
+	- Rank(): would give the identical rows the same rank. Ex: 1,2,2,4,4,6,7   
+	- Dense_rank(): rows with duplicates will not increase instead will keep the number; no ranks will be skipped. Ex: 1,2,2,2,3,3,4,5,6,6,7  
 
 Syntax: ***row_number()*** OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 - PARTITION BY not required (functions similarly as a GROUP BY)  
