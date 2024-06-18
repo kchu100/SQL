@@ -38,9 +38,17 @@ A database is an organized collection of data where the data is stored and organ
 
 **Normalization:**  
 - process of removing redundant data by splitting the table in a well-defined maner. Saves storage space.
+- improve data consistency, query performance, simplied database design, easier database maintenance
   
 **De-Normalization:**  
-- process of adding up redundant data to speed up complex queries in order to acheive better performance.  
+- process of adding up redundant data to speed up complex queries in order to acheive better performance.
+
+***5 forms of Normalization***  
+
+	1. First Normal Form (1NF): Each table cell contains a single value and each column has a unique name. Eliminate duplicate data and simplify queries.  
+ 	2. Second Normal Form (2NF): Eliminates redundant data by requiring each non-key attribute be dependent on primary key. Each column is directly related to primary key.  
+  	3. Third Normal Form (3NF): All non-key attributes are independent of each other. Builds on 2NF.  
+   		- Boyce-Codd Normal Form (BCNF): stricter form of 3NF. 
 
 # SQL  
 **What is SQL?**  
