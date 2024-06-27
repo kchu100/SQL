@@ -46,9 +46,10 @@ A database is an organized collection of data where the data is stored and organ
 ***5 forms of Normalization***  
 
 	1. First Normal Form (1NF): Each table cell contains a single value and each column has a unique name. Eliminate duplicate data and simplify queries.  
- 	2. Second Normal Form (2NF): Eliminates redundant data by requiring each non-key attribute be dependent on primary key. Each column is directly related to primary key.  
-  	3. Third Normal Form (3NF): All non-key attributes are independent of each other. Builds on 2NF.  
-   		- Boyce-Codd Normal Form (BCNF): stricter form of 3NF. 
+ 	2. Second Normal Form (2NF): Separate tables for sets of values that apply to multiple records. Relate these tables with a foreign key.   
+  	3. Third Normal Form (3NF): Eliminate fields that don't depend on the key. All non-key attributes are independent of each other.  
+   	4, Fourth Normal Form (4NF) (aka Boyce-Codd Normal Form (BCNF)): stricter form of 3NF.  
+    	5. Fifth Normal Form (5NF): 
 
 # SQL  
 **What is SQL?**  
